@@ -10,7 +10,9 @@
 }
 
 body,
-button {
+button,
+input,
+select {
     font-family: 'Mulish', sans-serif;
 }
 
@@ -656,6 +658,10 @@ footer hr {
         padding-inline: 20px;
     }
 
+    nav {
+        margin-block: 30px;
+    }
+
     .page-title img {
         width: 35px;
     }
@@ -723,6 +729,10 @@ footer hr {
 
     footer .page-title img {
         width: 1.6rem;
+    }
+
+    .socials img {
+        width: 1.5rem;
     }
 
 }

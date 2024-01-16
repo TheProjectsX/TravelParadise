@@ -4,23 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Paradise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <nav>
         <div class="page-title">
-          <img src="assets/images/" alt="Page Logo" />
-          <h3>Travel <span>Paradise</span></h3>
+          <img src="assets/images/logo.png" alt="Page Logo" />
+          <h1>Travel <span>Paradise</span></h1>
         </div>
 
-        <label for="ham-nav-toggle">
+        <label for="ham-nav-toggle" class="ham-nav-toggle-label">
           <img src="assets/icons/hamburger.svg" alt="Hamburger Icon" />
         </label>
         <input type="checkbox" id="ham-nav-toggle" hidden />
 
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="/">Home</a></li>
+            <li><a href="/" class="current-tab">Home</a></li>
             <li><a href="#">Packages</a></li>
             <li><a href="#">Testimonial</a></li>
             <li><a href="#">Blog</a></li>
@@ -38,10 +45,14 @@
           vacation effortlessly. Your journey begins here.
         </p>
 
-        <form>
+        <form class="header-form">
           <input type="text" placeholder="Where Go" />
-          <select name="travel-time"></select>
-          <select name="travel-type"></select>
+          <select name="travel-time">
+            <option value="" hidden>When</option>
+          </select>
+          <select name="travel-type">
+            <option value="" hidden>Select Type</option>
+          </select>
           <button type="submit" class="btn-primary">
             <img src="assets/icons/search.svg" alt="Search Icon" />
             Find Now
@@ -61,7 +72,7 @@
             yourself in diverse cultures, breathtaking landscapes, and curated
             experiences tailored to your travel dreams.
           </p>
-          <ul class="tours-desc">
+          <ul class="custom-list">
             <li>
               Discover local cultures and traditions, creating meaningful
               connections through authentic experiences.
@@ -81,6 +92,7 @@
             Tours. Immerse yourself in diverse cultures, breathtaking
             landscapes, and curated experiences that redefine travel bliss.
           </p>
+          <button class="btn-primary">Read More</button>
         </div>
         <div class="section-image-container">
           <img src="assets/images/Rectangle 4.png" alt="Mountain Image" />
@@ -90,20 +102,68 @@
       <!-- Choose your Destination -->
       <section class="choose-destination">
         <h3 class="section-title">Choose Your Destination</h3>
-        <p class="section-title">
+        <p class="section-desc">
           Select your dream destination with Travel Paradise. Browse enticing
-          images and choose from a curated list of breathtaking locales to plan
-          your next unforgettable adventure
+          images and choose from a curated list of breathtaking locales.
         </p>
 
         <div class="destination-choices">
-          <div>Maldives</div>
-          <div>Indonesia</div>
-          <div>Srilanka</div>
-          <div>North America</div>
-          <div>Kashmir</div>
-          <div>Bangladesh</div>
-          <div>Bandarban</div>
+          <div
+            style="
+              --bg-img: url('../assets/images/Maldives.jpg');
+              grid-area: img-01;
+            "
+          >
+            Maldives
+          </div>
+          <div
+            style="
+              --bg-img: url('../assets/images/Indonesia.jpg');
+              grid-area: img-02;
+            "
+          >
+            Indonesia
+          </div>
+          <div
+            style="
+              --bg-img: url('../assets/images/Srilanka.jpg');
+              grid-area: img-03;
+            "
+          >
+            Srilanka
+          </div>
+          <div
+            style="
+              --bg-img: url('../assets/images/North America.jpg');
+              grid-area: img-04;
+            "
+          >
+            North America
+          </div>
+          <div
+            style="
+              --bg-img: url('../assets/images/Kashmir.jpg');
+              grid-area: img-05;
+            "
+          >
+            Kashmir
+          </div>
+          <div
+            style="
+              --bg-img: url('../assets/images/Bangladesh.jpg');
+              grid-area: img-06;
+            "
+          >
+            Bangladesh
+          </div>
+          <div
+            style="
+              --bg-img: url('../assets/images/Bandarban.jpg');
+              grid-area: img-07;
+            "
+          >
+            Bandarban
+          </div>
         </div>
       </section>
 
@@ -113,7 +173,7 @@
         <p class="section-desc">
           Elevate your travel experience with Travel Paradise. Immerse in
           handpicked hotels, enjoy world-class service, and benefit from our
-          best price guarantee. Your journey, our commitment.
+          best price guarantee.
         </p>
 
         <div class="agency-benefits">
@@ -151,17 +211,17 @@
         <h3 class="section-title">Deals & Discounts</h3>
         <p class="section-desc">
           Unlock unbeatable savings with Travel Paradise's Deals & Discounts.
-          Explore exclusive offers on top destinations, creating memorable
-          journeys without breaking the bank. Your adventure, your savings.
+          Explore exclusive offers on top destinations. Your adventure, your
+          savings.
         </p>
 
         <div class="deals-container">
           <!-- div.deal-item*3>div.deal-desc>div.small-details>p>img[src="assets/icons/time.svg" alt="Time Icon"]{7 Day/6 Nights}^p>img[src="assets/icons/group.svg" alt="Group Icon"]{Max: 10}^p>img[src="assets/icons/location.svg" alt="Location Icon"]{Malaysia}^^h4.item-title{Tour To Satorini}+p.item-desc{Indulge in the allure of Tour to Santorini with Travel Paradise. Immerse in sun-soaked beaches, iconic whitewashed architecture, and vibrant culture. Experience a Mediterranean escape like never before}+p.item-price{Price: $1300-$1500}+button.btn-primary{Book Now} -->
           <div class="deal-item">
-            <div class="deal-desc deal-01">
+            <div class="deal-desc">
               <div class="small-details">
                 <p>
-                  <img src="assets/icons/time.svg" alt="Time Icon" />7 Day/6
+                  <img src="assets/icons/time.svg" alt="Time Icon" />7 Day / 6
                   Nights
                 </p>
                 <p>
@@ -178,18 +238,17 @@
               <p class="item-desc">
                 Indulge in the allure of Tour to Santorini with Travel Paradise.
                 Immerse in sun-soaked beaches, iconic whitewashed architecture,
-                and vibrant culture. Experience a Mediterranean escape like
-                never before
+                and vibrant culture.
               </p>
               <p class="item-price">Price: 11300-11500</p>
               <button class="btn-primary">Book Now</button>
             </div>
           </div>
           <div class="deal-item">
-            <div class="deal-desc deal-02">
+            <div class="deal-desc">
               <div class="small-details">
                 <p>
-                  <img src="assets/icons/time.svg" alt="Time Icon" />7 Day/6
+                  <img src="assets/icons/time.svg" alt="Time Icon" />7 Day / 6
                   Nights
                 </p>
                 <p>
@@ -206,18 +265,17 @@
               <p class="item-desc">
                 Indulge in the allure of Tour to Santorini with Travel Paradise.
                 Immerse in sun-soaked beaches, iconic whitewashed architecture,
-                and vibrant culture. Experience a Mediterranean escape like
-                never before
+                and vibrant culture.
               </p>
               <p class="item-price">Price: 21300-21500</p>
               <button class="btn-primary">Book Now</button>
             </div>
           </div>
           <div class="deal-item">
-            <div class="deal-desc deal-03">
+            <div class="deal-desc">
               <div class="small-details">
                 <p>
-                  <img src="assets/icons/time.svg" alt="Time Icon" />7 Day/6
+                  <img src="assets/icons/time.svg" alt="Time Icon" />7 Day / 6
                   Nights
                 </p>
                 <p>
@@ -234,8 +292,7 @@
               <p class="item-desc">
                 Indulge in the allure of Tour to Santorini with Travel Paradise.
                 Immerse in sun-soaked beaches, iconic whitewashed architecture,
-                and vibrant culture. Experience a Mediterranean escape like
-                never before
+                and vibrant culture.
               </p>
               <p class="item-price">Price: 31300-31500</p>
               <button class="btn-primary">Book Now</button>
@@ -251,8 +308,7 @@
         <h3 class="section-title">Travel Tips & Insights</h3>
         <p class="section-desc">
           Unlock travel wisdom with our Spacial Travel Tips. From savvy packing
-          to cultural nuances, empower your journey with our easy-to-follow
-          guides and expert advice.
+          to cultural nuances, empower your journey with our expert advice.
         </p>
         <div class="tips-container">
           <div class="tips-item">
@@ -318,26 +374,26 @@
           <h3 class="section-title">A Simple Perfect Place To Get Lost</h3>
           <p class="section-desc">
             Immerse yourself in the essence of our travel experiences through
-            our captivating presentation video. Let the visual narrative inspire
-            your wanderlust and adventure.
+            our captivating presentation video.
           </p>
-          <ul>
+          <ul class="custom-list">
             <li>
-              Explore stunning landscapes and cultural wonders in our
-              presentation video, providing a sneak peek into the magic awaiting
-              you.
+              Explore stunning landscapes and cultural wonders in our providing
+              sneak peek.
             </li>
             <li>
-              Our video captures the spirit of each destination, narrating the
-              unique stories and experiences that make your journey
-              extraordinary.
+              Our video captures the spirit of each destinations and experiences
+              that make your journey extraordinary.
             </li>
           </ul>
         </div>
 
         <div class="section-image-container">
-          <video controls autoplay>
-            <source src="" type="video/mp4" />
+          <video controls>
+            <source
+              src="assets/videos/travel-paradise-video.mp4"
+              type="video/mp4"
+            />
           </video>
         </div>
       </section>
@@ -357,6 +413,7 @@
           </form>
         </div>
         <div class="section-image-container">
+          <img src="assets/images/Rectangle 8 (1).png" alt="Image" />
           <div class="savings">
             <h4>TravelParadise</h4>
             <p>Save up to 70%</p>
@@ -366,13 +423,12 @@
     </main>
     <footer>
       <div class="page-title">
-        <img src="assets/images/" alt="Page Logo" />
-        <h3>Travel <span>Paradise</span></h3>
+        <img src="assets/images/logo.png" alt="Page Logo" />
+        <h1>Travel <span>Paradise</span></h1>
       </div>
       <p class="section-desc">
         Connect with Travel Paradise. Your gateway to seamless travel
-        experiences. Explore our destinations, discover exclusive deals, and
-        embark on unforgettable journeys. Your dream vacation begins with us.
+        experiences. Your dream vacation begins with us.
       </p>
       <div class="socials">
         <img src="assets/icons/Twitter.svg" alt="Twitter Icon" />
